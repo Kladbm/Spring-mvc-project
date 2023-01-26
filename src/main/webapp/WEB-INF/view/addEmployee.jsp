@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>Spring-MVC</title>
 </head>
 <body>
 <h2>Add new employee</h2>
@@ -15,9 +15,9 @@
     <br><br>
     <form:input path="surname" placeholder="Write your surname"/>
     <br><br>
-    <form:input path="salary" placeholder="Write your salary"/>
-    <br><br>
     <form:input path="department" placeholder="Write your department"/>
+    <br><br>
+    <form:input path="salary" placeholder="Write your salary"/>
     <br><br>
 
     <input type="submit" value="Add employee"/>
