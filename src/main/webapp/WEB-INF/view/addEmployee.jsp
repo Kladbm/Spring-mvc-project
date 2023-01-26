@@ -23,8 +23,9 @@
         <form:input path="salary" placeholder="Write your salary"/>
         <br><br>
 
-        <input type="submit" value="Add employee"/>
-        <input type="button" value="Cancel" onclick="window.location.href = '/'">
+        <input type="submit" class="button-add" value="Add employee"/>
+        <input type="button" class="button-cancel" value="Cancel"
+               onclick="window.location.href = '/'">
     </form:form>
 </div>
 </body>

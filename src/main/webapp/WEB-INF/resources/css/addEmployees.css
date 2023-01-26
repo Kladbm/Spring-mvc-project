@@ -12,3 +12,14 @@ h2 {
     margin: 20px 0;
     text-align: center;
 }
+
+.button-add, .button-cancel {
+    cursor: pointer;
+    outline: none;
+    background-color: #ffffff;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 14px;
+    color: #000000;
+    background-size: 100% 100%;
+}

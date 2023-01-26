@@ -19,6 +19,9 @@ public class Employee {
     @Column(name = "salary")
     private int salary;
 
+    @Column(name = "is_work")
+    private String is_work;
+
     public Employee() {
     }
 
@@ -27,6 +30,7 @@ public class Employee {
         this.surname = surname;
         this.department = department;
         this.salary = salary;
+        this.is_work = "true";
     }
 
     public int getId() {
@@ -67,6 +71,14 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public String getIs_work() {
+        return is_work;
+    }
+
+    public void setIs_work(String is_work) {
+        this.is_work = is_work;
     }
 
     @Override
