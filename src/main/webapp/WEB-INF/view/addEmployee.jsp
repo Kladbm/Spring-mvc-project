@@ -20,7 +20,8 @@
     <form:input path="department" placeholder="Write your department"/>
     <br><br>
 
-    <input type="submit" value="Ok"/>
+    <input type="submit" value="Add employee"/>
+    <input type="button" value="Cancel" onclick="window.location.href = '/'">
 </form:form>
 </body>
 </html>
