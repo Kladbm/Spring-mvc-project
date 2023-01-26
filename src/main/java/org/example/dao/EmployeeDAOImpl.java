@@ -7,6 +7,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,12 +20,19 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
-        List<Employee> employees = session.createQuery("from Employee", Employee.class)
+        List<Employee> allEmployees = session.createQuery("from Employee", Employee.class)
                 .getResultList();
 
-        for (int i = 0; i < employees.size(); i++) {
-            if (Objects.equals(employees.get(i).getIs_work(), "false")) {
-                employees.remove(i);
+        for (Employee allEmployee : allEmployees) {
+            if (allEmployee.getIs_work() == null) {
+                allEmployee.setIs_work("true");
+            }
+        }
+
+        List<Employee> employees = new ArrayList<>();
+        for (Employee allEmployee : allEmployees) {
+            if (Objects.equals(allEmployee.getIs_work(), "true")) {
+                employees.add(allEmployee);
             }
         }
 

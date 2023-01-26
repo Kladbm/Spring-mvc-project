@@ -30,7 +30,6 @@ public class Employee {
         this.surname = surname;
         this.department = department;
         this.salary = salary;
-        this.is_work = "true";
     }
 
     public int getId() {
