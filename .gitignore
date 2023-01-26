@@ -1,2 +1,3 @@
 # Project exclude paths
 /target/
+/apache-tomcat-10.0.27/
