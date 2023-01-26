@@ -17,7 +17,7 @@
             <div class="col col-3">Surname</div>
             <div class="col col-4">Department</div>
             <div class="col col-5">Salary</div>
-            <div class="col col-5">Operations</div>
+            <div class="col col-6">Operations</div>
         </li>
         <c:forEach var="item" items="${allEmployees}">
 
@@ -46,6 +46,7 @@
     </ul>
 </div>
 <br>
-<input type="button" class="button-add" value="Add" onclick="window.location.href = 'addEmployee'">
+<input type="button" class="button-add" value="Add employee"
+       onclick="window.location.href = 'addEmployee'">
 </body>
 </html>
