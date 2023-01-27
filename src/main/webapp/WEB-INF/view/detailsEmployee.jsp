@@ -5,13 +5,13 @@
 <head>
     <title>Spring-MVC</title>
     <style>
-        <%@ include file="../resources/css/addEmployee.css"%>
+        <%@ include file="../resources/css/detailsEmployee.css"%>
     </style>
 </head>
 <body>
-<form:form class="addEmployee" action="saveEmployee" modelAttribute="employee">
+<form:form class="detailsEmployee" action="saveEmployee" modelAttribute="employee">
 
-    <h4 class="addEmployeeHeader">Add new employee</h4>
+    <h4 class="detailsEmployeeHeader">Employee</h4>
 
     <form:hidden path="id"/>
 
@@ -28,7 +28,7 @@
     <form:input class="text" path="salary" placeholder="Write your salary"/>
     <br>
 
-    <h4 class="addEmployeeHeader">Add details</h4>
+    <h4 class="detailsEmployeeHeader">Employee details</h4>
 
     <label>City</label>
     <form:input class="text" path="details.city" placeholder="Write your city"/>
@@ -40,7 +40,7 @@
     <form:input class="text" path="details.email" placeholder="Write your email"/>
     <br>
 
-    <input type="submit" class="button-add" value="Add employee"/>
+    <input type="submit" class="button-add" value="Save details"/>
     <input type="button" class="button-cancel" value="Cancel"
            onclick="window.location.href = '/'">
 </form:form>

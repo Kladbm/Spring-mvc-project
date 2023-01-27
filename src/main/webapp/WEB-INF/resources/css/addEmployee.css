@@ -1,0 +1,58 @@
+body {
+    font-family: 'lato', sans-serif;
+}
+
+.addEmployee input[type=text] {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    text-align: left;
+}
+
+.addEmployee input[type=text]:focus {
+    border: 1px solid #a8a8a8;
+}
+
+.addEmployee input[type=submit], .addEmployee input[type=button] {
+    float: right;
+    margin: -20px 20px 10px 0;
+}
+
+.addEmployee {
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    padding: 40px;
+    width: 40%;
+    margin: 20px auto 0;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.addEmployeeHeader {
+    text-align: center;
+}
+
+select {
+    width: 95%;
+    padding: 12px 20px;
+    margin: auto 0;
+    display: block;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.button-add, .button-cancel {
+    cursor: pointer;
+    outline: none;
+    background-color: #ffffff;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 14px;
+    color: #000000;
+    background-size: 100% 100%;
+}

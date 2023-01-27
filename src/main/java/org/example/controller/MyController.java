@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.entity.Details;
 import org.example.entity.Employee;
 import org.example.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,16 +33,21 @@ public class MyController {
         Employee employee = new Employee();
         model.addAttribute("employee", employee);
 
+        Details details = new Details();
+        model.addAttribute("details", details);
+
+        employee.setDetails(details);
+
         return "addEmployee";
     }
 
-    @RequestMapping("/updateEmployee")
+    @RequestMapping("/detailsEmployee")
     public String updateEmployee(@RequestParam("employeeId") int id, Model model) {
 
         Employee employee = employeeService.getEmployee(id);
         model.addAttribute("employee", employee);
 
-        return "addEmployee";
+        return "detailsEmployee";
     }
 
     @RequestMapping("/saveEmployee")

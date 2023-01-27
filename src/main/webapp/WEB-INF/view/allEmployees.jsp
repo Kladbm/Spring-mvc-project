@@ -1,10 +1,11 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Spring-MVC</title>
     <style>
-        <%@ include file="../resources/css/allEmployees.css" %>
+        <%@ include file="../resources/css/allEmployees.css"%>
     </style>
 </head>
 <body>
@@ -21,7 +22,7 @@
         </li>
         <c:forEach var="item" items="${allEmployees}">
 
-            <c:url var="detailsButton" value="/updateEmployee">
+            <c:url var="detailsButton" value="/detailsEmployee">
                 <c:param name="employeeId" value="${item.id}"/>
             </c:url>
 
