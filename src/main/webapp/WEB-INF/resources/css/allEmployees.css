@@ -80,7 +80,7 @@ h2 {
     }
 }
 
-.button-update, .button-error {
+.button-details, .button-error {
     cursor: pointer;
     outline: none;
     background-color: #ffffff;

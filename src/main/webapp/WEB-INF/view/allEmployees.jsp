@@ -15,13 +15,13 @@
             <div class="col col-1">ID</div>
             <div class="col col-2">Name</div>
             <div class="col col-3">Surname</div>
-            <div class="col col-4">Department</div>
-            <div class="col col-5">Salary</div>
+            <div class="col col-4">Salary</div>
+            <div class="col col-5">Department</div>
             <div class="col col-6">Operations</div>
         </li>
         <c:forEach var="item" items="${allEmployees}">
 
-            <c:url var="updateButton" value="/updateEmployee">
+            <c:url var="detailsButton" value="/updateEmployee">
                 <c:param name="employeeId" value="${item.id}"/>
             </c:url>
 
@@ -33,11 +33,11 @@
                 <div class="col col-1" data-label="ID">${item.id}</div>
                 <div class="col col-2" data-label="Name">${item.name}</div>
                 <div class="col col-3" data-label="Surname">${item.surname}</div>
-                <div class="col col-4" data-label="Department">${item.department}</div>
-                <div class="col col-5" data-label="Salary">${item.salary}</div>
+                <div class="col col-4" data-label="Salary">${item.salary}</div>
+                <div class="col col-5" data-label="Department">${item.department}</div>
                 <div class="col col-6" data-label="Operations">
-                    <input type="button" class="button-update" value="Update"
-                           onclick="window.location.href = '${updateButton}'"/>
+                    <input type="button" class="button-details" value="Details"
+                           onclick="window.location.href = '${detailsButton}'"/>
                     <input type="button" class="button-error" value="Delete"
                            onclick="window.location.href = '${deleteButton}'">
                 </div>
