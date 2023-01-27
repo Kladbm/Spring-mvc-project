@@ -10,25 +10,32 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "surname")
     private String surname;
-    @Column(name = "department")
-    private String department;
+
     @Column(name = "salary")
     private int salary;
+
+    @Column(name = "department")
+    private String department;
 
     @Column(name = "is_work")
     private String is_work;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "details_id")
+    private Details details;
+
     public Employee() {
     }
 
-    public Employee(String name, String surname, String department, int salary) {
+    public Employee(String name, String surname, int salary) {
         this.name = name;
         this.surname = surname;
-        this.department = department;
         this.salary = salary;
     }
 
@@ -56,20 +63,20 @@ public class Employee {
         this.surname = surname;
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
     public int getSalary() {
         return salary;
     }
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
     public String getIs_work() {
@@ -80,13 +87,20 @@ public class Employee {
         this.is_work = is_work;
     }
 
+    public Details getDetails() {
+        return details;
+    }
+
+    public void setDetails(Details details) {
+        this.details = details;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", department='" + department + '\'' +
                 ", salary=" + salary +
                 '}';
     }
