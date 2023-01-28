@@ -1,0 +1,92 @@
+body {
+    font-family: 'lato', sans-serif;
+}
+
+.addUser input[class=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    text-align: left;
+    font-size: 16px;
+}
+
+.addUser input[class=text]:focus {
+    border: 1px solid #a8a8a8;
+}
+
+.addUser input[type=submit], .addUser input[type=button] {
+    float: right;
+    margin: -20px 0 -10px 0;
+}
+
+.addUser {
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    padding: 40px;
+    width: 40%;
+    margin: 20px auto 0;
+    box-shadow: 1px 1px 5px #888888;
+    font-size: 17px;
+}
+
+.addUserHeader, .addUseNotHeader {
+    text-align: center;
+}
+
+.addUseNotHeader {
+    font-weight: normal;
+}
+
+select {
+    width: 95%;
+    padding: 12px 20px;
+    margin: auto 0;
+    display: block;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.button-add {
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 5px;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+}
+
+.button-add:focus {
+    border: 1px solid #a8a8a8;
+}
+
+a {
+    text-decoration: none;
+    color: #008cff;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -12,6 +12,7 @@ body {
     box-sizing: border-box;
     resize: none;
     text-align: left;
+    font-size: 16px;
 }
 
 .addEmployee input[type=text]:focus {
@@ -30,6 +31,7 @@ body {
     width: 40%;
     margin: 20px auto 0;
     box-shadow: 1px 1px 5px #888888;
+    font-size: 17px;
 }
 
 .addEmployeeHeader {

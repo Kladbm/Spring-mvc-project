@@ -42,7 +42,7 @@
 
     <input type="submit" class="button-add" value="Save details"/>
     <input type="button" class="button-cancel" value="Cancel"
-           onclick="window.location.href = '/'">
+           onclick="window.location.href = '/allEmployees'">
 </form:form>
 </body>
 </html>

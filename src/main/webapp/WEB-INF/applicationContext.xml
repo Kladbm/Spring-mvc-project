@@ -21,7 +21,7 @@
     <context:property-placeholder location="classpath:application.properties"/>
 
     <mvc:annotation-driven/>
-    <mvc:resources mapping="/resources/**" location="WEB-INF/resources/css"/>
+    <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/.."/>
 
     <aop:aspectj-autoproxy/>
 
