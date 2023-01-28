@@ -2,9 +2,7 @@ package org.example.controller;
 
 import org.example.entity.Details;
 import org.example.entity.Employee;
-import org.example.entity.User;
 import org.example.service.EmployeeService;
-import org.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,45 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-public class MyController {
+public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
-
-    @Autowired
-    private UserService userService;
-
-    @RequestMapping("/sign_in")
-    public String signInForm(Model model) {
-
-        User user = new User();
-        model.addAttribute("user", user);
-
-        return "signInForm";
-    }
-
-    @RequestMapping("/sign_up")
-    public String signUpForm(Model model) {
-
-        User user = new User();
-        model.addAttribute("user", user);
-
-        return "signUpForm";
-    }
-
-    @RequestMapping("/save_user")
-    public String saveUser(@ModelAttribute("user") User user) {
-
-        userService.saveUser(user);
-
-        return "redirect:/allEmployees";
-    }
-
-    @RequestMapping("/verification_user")
-    public String verificationUser(@ModelAttribute("user") User user) {
-        //*
-        return null;
-    }
 
     @RequestMapping("/allEmployees")
     public String showAllEmployees(Model model) {

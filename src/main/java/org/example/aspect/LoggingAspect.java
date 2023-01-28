@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 
 @Component
 @Aspect
-public class MyLoggingAspect {
+public class LoggingAspect {
 
     @Around("execution(* org.example.dao.*.*(..))")
     public Object aroundAllRepositoryMethodAdvice(ProceedingJoinPoint proceedingJoinPoint)
